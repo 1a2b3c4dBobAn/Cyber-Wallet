@@ -1,5 +1,4 @@
-import React from 'React';
-
+import React from 'react';
 class SearchContainer extends React.Component {
 
   render() {
