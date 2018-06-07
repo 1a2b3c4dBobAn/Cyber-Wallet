@@ -8,6 +8,8 @@
 
 require 'csv'
 
-CSV.foreach("/Users/xiangyuan/Desktop/fullStackProject/Cyber-Wallet/app/assets/lists/valid_company.csv") do |row|
+companies = File.join(Rails.root,'app','assets','lists','valid_company.cvs')
+
+CSV.foreach(companies) do |row|
   Stock.create({symbol:row[0], name:row[1], last_sale:row[2], market_cap:row[3],ipo_year:row[4], sector:row[5], industry:row[6], summary_quote:row[7]})
 end
