@@ -47,8 +47,8 @@ line {
 .left{
   margin-top: 270px;
   width: 45%;
-  height: 100%
-  position:relative;
+  height: 100%;
+  position: relative;
   box-sizing: border-box;
   display: flex;
 }
