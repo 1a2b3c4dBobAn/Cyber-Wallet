@@ -24,6 +24,7 @@
 
 // Full stack project phase 1, to add:
 node_modules/
+/config/secrets.yml
 bundle.js
 bundle.js.map
 .byebug_history

@@ -1,0 +1,1 @@
+<AuthRoute exact path="/stocks/:symbol" component={StockPageContainer}>
