@@ -6,6 +6,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "jquery-ujs": "^1.2.2",
     "lodash": "^4.17.10",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
