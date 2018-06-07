@@ -8,7 +8,7 @@ class StockShow extends React.Component {
 
   render(){
     return(
-
+      'Hello'
     )
   }
 }
