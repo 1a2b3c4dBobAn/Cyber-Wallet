@@ -85,7 +85,7 @@ line {
 
 .login-input {
   background-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 3px 6px rgb(76,3,80,0.9);
+  box-shadow: 0px 3px 6px rgba(76,3,80,0.9);
   color: white;
   border: 0.1px ;
   border-radius: 3px;
@@ -112,14 +112,14 @@ line {
   border-radius: 3px;
   padding: 12px 80px 15px 80px;
   font-weight: bolder;
-  background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 30%, rgb(76,3,80,0.8) 105%);
-  box-shadow: 0px 7px 5px rgb(0, 14, 32 , 0.4);
+  background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 30%, rgba(76,3,80,0.8) 105%);
+  box-shadow: 0px 7px 5px rgba(0, 14, 32 , 0.4);
   border: none;
   transition: box-shadow 0.1s;
 }
 
 .session-submit:hover {
-    box-shadow: 0px 2px 5px rgb(0, 14, 32 , 0.4);
+    box-shadow: 0px 2px 5px rgba(0, 14, 32 , 0.4);
     background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 50%,#4c0350 125%);
 }
 
@@ -131,14 +131,14 @@ line {
   border-radius: 3px;
   padding: 12px 56px 15px 56px;
   font-weight: bolder;
-  background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 20%,rgb(76,3,80,0.8) 105%);
-  box-shadow: 0px 7px 5px rgb(0, 14, 32 , 0.4);
+  background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 20%,rgba(76,3,80,0.8) 105%);
+  box-shadow: 0px 7px 5px rgba(0, 14, 32 , 0.4);
   border: none;
   transition: box-shadow 0.1s;
 }
 
 .DemonLogin:hover {
-  box-shadow: 0px 2px 5px rgb(0, 14, 32 , 0.4);
+  box-shadow: 0px 2px 5px rgba(0, 14, 32 , 0.4);
   background: linear-gradient(to bottom, #24ffc7 10%, rgb(42, 183, 110) 50%,#4c0350 125%);
 }
 
@@ -176,7 +176,7 @@ a {
 }
 
 #searchbar.login-input:hover{
-  background-color: rgb(0, 0, 0,0.4);
+  background-color: rgba(0, 0, 0,0.4);
 }
 
 .header-group{
@@ -193,8 +193,8 @@ a {
   border-radius: 3px;
   padding: 1px 30px 2px 30px;
   font-weight: bolder;
-  background:rgb(76,3,80,0.1);
-  box-shadow: 0px 3px 1px rgb(0, 14, 32 , 0.6);
+  background:rgba(76,3,80,0.1);
+  box-shadow: 0px 3px 1px rgba(0, 14, 32 , 0.6);
   border: none;
   transition: box-shadow 0.3s;
 }
