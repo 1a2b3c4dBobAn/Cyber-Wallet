@@ -12,31 +12,29 @@
 #  industry      :string           not null
 #  summary_quote :string           not null
 #
+# require 'httparty'
 
 class Stock < ApplicationRecord
   include HTTParty
 
-  def get_price(func)
+  def get_prices(func)
     interval = ''
     interval = '&interval=15min' if func === 'TIME_SERIES_INTRADAY'
     alpha_v_key = ENV["alpha_v_key"]
     sym = self.symbol
     response = HTTParty.get('https://www.alphavantage.co/query?function='+func+'&symbol='+sym+interval+'&outputsize=full&apikey=' + alpha_v_key)
     response.delete("Meta Data")
-    # if func = 'TIME_SERIES_INTRADAY'
-    #   time_series = 'Time Series (15min)'
-    # elsif func = 'TIME_SERIES_DAILY'
-    #   time_series = 'Time Series (Daily)'
-    # elsif func = 'TIME_SERIES_WEEKLY'
-    #   time_series = 'Weekly Time Series'
-    # elsif func = 'TIME_SERIES_MONTHLY'
-    #   time_series = 'Monthly Time Series'
-    # end
-    response
-    # times = response[time_series].keys
-    # close_prices = times.map{|time| {time => response[time_series][time]['4.close']}}
+    if func = 'TIME_SERIES_INTRADAY'
+      time_series = 'Time Series (15min)'
+    elsif func = 'TIME_SERIES_DAILY'
+      time_series = 'Time Series (Daily)'
+    elsif func = 'TIME_SERIES_WEEKLY'
+      time_series = 'Weekly Time Series'
+    elsif func = 'TIME_SERIES_MONTHLY'
+      time_series = 'Monthly Time Series'
+    end
+    key = response.keys[0]
+    times = response[response.keys[0]].keys
+    close_prices = times.map{|time| {time => (response[response.keys[0]][time]['4. close']).to_f}}
   end
-
-
-
 end

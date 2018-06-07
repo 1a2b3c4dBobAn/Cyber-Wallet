@@ -8,8 +8,8 @@
 
 require 'csv'
 
-companies = File.join(Rails.root,'assets','lists','valid_company.csv')
+companies = File.join(Rails.root, 'db','lists','valid_company.csv')
 
 CSV.foreach(companies) do |row|
-  Stock.create({symbol:row[0], name:row[1], last_sale:row[2], market_cap:row[3],ipo_year:row[4], sector:row[5], industry:row[6], summary_quote:row[7]})
+  Stock.create!({symbol:row[0], name:row[1], last_sale:row[2], market_cap:row[3],ipo_year:row[4], sector:row[5], industry:row[6], summary_quote:row[7]})
 end

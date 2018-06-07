@@ -9,7 +9,9 @@ import {
 
 import SearchContainer from './search/search_container'
 import GreetingContainer from './greeting/greeting_container';
-
+import StockShowContainer from './stock/stock_show_container'
+// import DashBoardContainer from './dashboard/dashboard_container'
+// <ProtectedRoute path="/" component={ DashBoardContainer }/>
 
 const MainPage = () => (
   <div class="mian_page">
@@ -18,6 +20,9 @@ const MainPage = () => (
       <GreetingContainer />
     </header>
     <div id="main_content" >
+      <Switch>
+      <ProtectedRoute path="/stocks/:stockId" component={ StockShowContainer }/>
+      </Switch>
     </div>
   </div>
 )
