@@ -19,6 +19,10 @@ class User < ApplicationRecord
   validates :username, :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
+  has_one :portfolio
+  has_many :watchlistitems
+  has_many :fills
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)

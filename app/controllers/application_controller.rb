@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-   protect_from_forgery with: :exception
+   # protect_from_forgery with: :exception
+   skip_before_action :verify_authenticity_token, raise: false
 
    helper_method :current_user, :logged_in?
 
@@ -31,5 +32,5 @@ class ApplicationController < ActionController::Base
        render json: { base: ['invalid credentials'] }, status: 401
      end
    end
-   
+
 end

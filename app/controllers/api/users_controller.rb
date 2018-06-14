@@ -3,6 +3,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      @user.portfolio = Portfolio.new({purchase_power: 100000, user_id: @user.id })
       login(@user)
       render "api/users/show"
     else

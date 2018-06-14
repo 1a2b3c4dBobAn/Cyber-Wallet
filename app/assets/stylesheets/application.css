@@ -21,9 +21,10 @@ body {
   color: white;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(206deg, #24ffc7 5%, #00ceb4 10%, #172050 60%, black 75%, #79047f);
-  background-size: 300% 300%;
+  background: linear-gradient(206deg, #24ffc7 5%, #00ceb4 10%, #172050 60%, black 72%, #79047f);
+  background-size: 280% 280%;
   animation: BackgroundGradient 17s ease infinite;
+  /* perspective: 600px; */
 
 }
 
@@ -119,6 +120,7 @@ line {
 }
 
 .session-submit:hover {
+    cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 14, 32 , 0.4);
     background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 50%,#4c0350 125%);
 }
@@ -138,6 +140,7 @@ line {
 }
 
 .DemonLogin:hover {
+  cursor: pointer;
   box-shadow: 0px 2px 5px rgba(0, 14, 32 , 0.4);
   background: linear-gradient(to bottom, #24ffc7 10%, rgb(42, 183, 110) 50%,#4c0350 125%);
 }
@@ -152,14 +155,16 @@ a {
 
 
 .mian_page {
-  height: 1500px;
+  height: 1000px;
   font-size: 12px;
   font-weight: lighter;
 }
 
 .mainHeader{
   display: flex;
-  margin-top: 20px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  z-index: 100;
 }
 
 .header_title {
@@ -167,17 +172,81 @@ a {
   text-align: center;
 }
 
-#searchbar.login-input {
+.search-block {
   width: 400px;
+  flex-basis: 75%;
+  position: relative;
+
+}
+
+.search-list {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  background: linear-gradient(206deg, #00ceb4 -10%, #172050 70%, #79047f 140%);
+  border-radius: 3px;
+  width: 94%;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px rgba(76,3,80,0.6);
+}
+
+.search-list ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.search-li {
+  padding-left: 80px;
+  list-style-type: none;
+  margin: auto;
+  height: 36px;
+  position: relative;
+}
+
+.search-li:hover {
+  transition: box-shadow 0.3s;
+  background-color: rgba(0,0,0,0.9);
+  box-shadow: 0px 0px 7px #24ffc7;
+  background: linear-gradient(206deg, #00ceb4 20%, #172050 80%, #79047f 110%);
+}
+
+.search-li p {
+  margin-top: 10px;
+  display: inline-block;
+   vertical-align: top;
+}
+
+
+.stock-li-name {
+  position: absolute;
+  left: 35%;
+}
+
+.stock-link{
+  text-decoration: none;
+}
+
+
+
+#searchbar.login-input {
+  width: 94%;
   height: 32px;
   margin-left: 50px;
   margin-right: 25px;
-  flex-basis: 75%;
 }
 
 #searchbar.login-input:hover{
   background-color: rgba(0, 0, 0,0.4);
+
+  color: rgb(255,255,255)
 }
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255,255,255,0.4);
+  box-shadow: none;
+}
+
 
 .header-group{
   flex-basis: 25%;
@@ -203,3 +272,292 @@ a {
   box-shadow: 0px 0px 7px #24ffc7;
   text-shadow: 0px 0px 4px #24ffc7;
 }
+
+.stockPage {
+  margin-left: 80px;
+}
+
+.stockPageCore {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.stockGraph {
+  flex: 75%;
+}
+
+.sideBox{
+  flex: 25%;
+  margin: 0px 6% 0px 3%;
+}
+
+.fillsBox{
+  width: 270px;
+  height:360px;
+  margin: 0px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 15px rgba(76,3,80,0.4);
+  transition: box-shadow 1.2s;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.fillsBox:hover{
+  box-shadow: 0px 0px 17px #24ffc7;
+}
+
+.fillform-box{
+}
+
+.fillform-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch-side{
+  border: none;
+  background-color: rgb(0,0,0,0);
+  color: white;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
+  padding-top: 18px;
+  padding-bottom: 12px;
+  text-decoration: none;
+}
+
+#on{
+  border-top: 4px solid #24ffc7;
+}
+
+#off{
+  border-top: 4px solid rgba(76,3,80,0);
+  box-shadow: 0px 4px 15px rgba(76,3,80,0);
+  transition: box-shadow 0.2s;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#off:hover{
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.2);
+  /* text-shadow: 0px 0px 4px #24ffc7; */
+  box-shadow: 0px 0px 17px #24ffc7;
+}
+
+.share-input {
+  display: flex;
+  margin: 20px 0px 20px auto;
+  justify-content: space-between;
+}
+
+.fillform-input{
+  background-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 6px rgba(76,3,80,0.9);
+  text-align: right;
+  color: white;
+  border: 0.1px ;
+  border-radius: 3px;
+  width: 150px;
+  height: 35px;
+  box-sizing: border-box;
+  padding: 7px;
+  transition: box-shadow 0.25s;
+  caret-color: rgba(0, 0, 0, 0.15);
+}
+
+.fillform-input:hover {
+  caret-color: #24ffc7;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 7px #24ffc7;
+  text-shadow: 0px 0px 4px #24ffc7;
+}
+
+
+.market-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.estimate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.asset-display{
+  margin-top: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.asset-display-text{
+  margin: auto;
+}
+
+#order-submit.session-submit {
+  margin: 0;
+  margin-top: 20px;
+  width: 230px;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.company_title{
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 5px 5px #79047f;
+  margin-bottom: 15px;
+}
+
+.pointed_price{
+  font-size: 25px;
+  font-family: 'Press Start 2P', cursive;
+  margin: 10px 0px 10px 0px;
+}
+
+.price_change {
+  font-size: 16px;
+  margin: 10px 0px 40px 0px;
+}
+
+.stockDataButton {
+  height: 30px;
+  color: white;
+  font-size: 10px;
+  margin:  3.6px 5px auto 3px;
+  border-radius: 3px;
+  padding: 1px 30px 2px 30px;
+  font-weight: bolder;
+  background:rgba(58, 255, 204, 0.06);
+  box-shadow: 0px 3px 8px rgba(76,3,80,0.9);
+  border: none;
+  transition: box-shadow 0.3s;
+}
+
+.stockDataButton:hover{
+  background-color: rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px #24ffc7;
+  text-shadow: 0px 0px 4px #24ffc7;
+}
+
+.buttonGroup{
+  margin-left: 70px;
+}
+
+
+.addOrRemove{
+  border: none;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  height: 40px;
+  width:  150px;
+  transition: box-shadow 0.3s;
+  margin-left:  60px;
+}
+
+.addOrRemove:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #24ffc7;
+}
+.custom-tooltip{
+  font-size: 15px;
+  box-shadow:
+}
+
+.portfolio{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  /* border: 1px solid white; */
+}
+
+.portfolio-sector{
+    width: 65%;
+}
+
+.portfolio-chart{
+
+  height: 500px;
+}
+
+.asset-charts {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-watchlist{
+  margin-left: 30px;
+  width: 29%;
+  box-shadow: 0px 4px 15px rgba(76,3,80,0.4);
+  box-sizing: border-box;
+  transition: box-shadow 1.2s;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.dashboard-watchlist:hover{
+  box-shadow: 0px 0px 17px #24ffc7;
+}
+
+.watchlist-link{
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+}
+
+.watchlist-li{
+  margin-top: 10px;
+  display: flex;
+  vertical-align: top;
+  justify-content: space-between;
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+
+.watchlist-li:hover{
+  box-shadow: 0px 0px 17px #24ffc7;
+}
+
+.watchlist-li-name{
+  margin-left: 80px;
+}
+
+.watchlist-li-price{
+  margin-left: 80px;
+}
+
+
+/* the spinner for loading */
+
+#spinner {
+  margin: auto;
+  margin-top: 20%;
+  font-size:60px;
+  text-align: center;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 0.7s;
+}
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(-360deg); }
+}
+@keyframes depth {
+  0% { text-shadow: 0 0 black; }
+  25% { text-shadow: 1px 0 black, 10px 0 black, 10px 0 black, 4px 0 black, 5px 0 black; }
+  50% { text-shadow: 0 0 yellow; }
+  75% { text-shadow: -1px 0 black, -2px 0 black, -10px 0 black, -4px 0 black, -5px 0 black; }
+  100% { text-shadow: 0 0 black; }
+}
+
+
+
+
+/* Below is for further styling, changing class for the color */

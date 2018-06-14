@@ -1,6 +1,7 @@
 import StockShow from './stock_show';
 import { connect } from 'react-redux';
-import { fecthStock } from '../../actions/stock_actions';
+import { fetchStock } from '../../actions/stock_actions';
+import { fetchPortfolio } from '../../actions/fill_actions';
 
 
 const mapStateToProps = state => ({
@@ -9,7 +10,8 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-  fetchStock: stockSymbol => dispatch(fetchStock(stockSymbol))
+  fetchStock: (symbol, func, time_range) => dispatch(fetchStock(symbol, func, time_range)),
+  fetchPortfolio: () => dispatch(fetchPortfolio())
 })
 
 

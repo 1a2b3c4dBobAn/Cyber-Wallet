@@ -10,18 +10,19 @@ import {
 import SearchContainer from './search/search_container'
 import GreetingContainer from './greeting/greeting_container';
 import StockShowContainer from './stock/stock_show_container'
-// import DashBoardContainer from './dashboard/dashboard_container'
+import DashBoardContainer from './dashboard/dashboard_container'
 // <ProtectedRoute path="/" component={ DashBoardContainer }/>
 
 const MainPage = () => (
-  <div class="mian_page">
+  <div className="mian_page">
     <header className="mainHeader">
       <SearchContainer />
       <GreetingContainer />
     </header>
     <div id="main_content" >
       <Switch>
-      <ProtectedRoute path="/stocks/:stockId" component={ StockShowContainer }/>
+      <ProtectedRoute path="/stocks/:symbol" component={ StockShowContainer }/>
+      <ProtectedRoute exact path="/" component={ DashBoardContainer }/>
       </Switch>
     </div>
   </div>

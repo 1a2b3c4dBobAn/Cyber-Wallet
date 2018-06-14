@@ -9,5 +9,7 @@ json.stock do
   json.industry @stock.industry
   json.summary_quote @stock.summary_quote
 
+
+  json.func @func
   json.prices @prices
 end

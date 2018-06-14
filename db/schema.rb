@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_07_072412) do
+ActiveRecord::Schema.define(version: 2018_06_10_215047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "fills", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "stock_id", null: false
+    t.float "price", null: false
+    t.integer "size", null: false
+    t.string "side", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stock_id"], name: "index_fills_on_stock_id"
+    t.index ["user_id"], name: "index_fills_on_user_id"
+  end
+
+  create_table "portfolios", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "purchase_power", null: false
+    t.index ["user_id"], name: "index_portfolios_on_user_id", unique: true
+  end
 
   create_table "stocks", force: :cascade do |t|
     t.string "symbol", null: false
@@ -37,6 +55,13 @@ ActiveRecord::Schema.define(version: 2018_06_07_072412) do
     t.datetime "updated_at", null: false
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "watchlistitems", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "stock_id", null: false
+    t.index ["stock_id"], name: "index_watchlistitems_on_stock_id"
+    t.index ["user_id"], name: "index_watchlistitems_on_user_id"
   end
 
 end
