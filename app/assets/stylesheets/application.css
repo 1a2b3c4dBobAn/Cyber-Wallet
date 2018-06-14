@@ -317,7 +317,7 @@ a {
 
 .switch-side{
   border: none;
-  background-color: rgb(0,0,0,0);
+  background-color: rgba(0,0,0,0);
   color: white;
   font-size: 10px;
   font-family: 'Press Start 2P', cursive;
