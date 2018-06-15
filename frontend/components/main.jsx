@@ -16,6 +16,11 @@ import DashBoardContainer from './dashboard/dashboard_container'
 const MainPage = () => (
   <div className="mian_page">
     <header className="mainHeader">
+      <div>
+        <Link to={"/"} className="spin-dollar">
+         <h1 class="text-flicker-out-glow">💵</h1>
+        </Link>
+      </div>
       <SearchContainer />
       <GreetingContainer />
     </header>
