@@ -33,25 +33,31 @@ Things you may want to cover:
    
  * **Alpha Vantage**
  
- # Demos
+## Demos
  
- ## Login
+### Login
+ 
+Lo
+
+ 
+### Dashboard
+ 
+Users can view key financial performance metrics on their personal dashboard. The historical portfolio performance will be showed here, The Cash Allocation and Holdings Diversity charts are generated from Portfolio model associate with Fill model.
+
+Users can also view an index of all stocks in their watchlist, click the watchlist and the real-time stock data show page will be rendered.
+ 
+### Real-time Stock Show Page
+ 
+
+### Real-time Trading system
  
  
- 
- ## Dashboard
- 
- 
- ## Real-time Stock Show Page
- 
- 
- 
- ## Search
+## Stock Searching
  
  
  
  # Code Samples
- 
+
  
  
  # Design Highlights
