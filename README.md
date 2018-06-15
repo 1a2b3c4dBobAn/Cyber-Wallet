@@ -8,5 +8,4 @@ Things you may want to cover:
 # Features
 
 * User authentication:
-
 end-to-end using BCrypt.
