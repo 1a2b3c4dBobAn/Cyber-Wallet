@@ -42,7 +42,9 @@ Things you may want to cover:
 
  
 ### Dashboard
- 
+
+![Dashboard](https://media.giphy.com/media/dYQxMdDgrcgNCXvw0A/giphy.gif)
+
 * Users can view key financial performance metrics on their personal dashboard.
 * The historical portfolio performance will be showed here.
 * The Cash Allocation and Holdings Diversity charts are generated from Portfolio model associate with Fill model.
