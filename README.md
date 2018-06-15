@@ -7,31 +7,31 @@ Things you may want to cover:
 
 # Features
 
-* ### **User authentication:** end-to-end using BCrypt.
+* **User authentication:** end-to-end using BCrypt.
 
-* ### Real-time Stock Data: user can get all real-time data of the stocks that on Nasdap. 
+* **Real-time Stock Data:** user can get all real-time data of the stocks that on Nasdap. 
 
-* ### Stock Trade System: User can simulate real-time trading with
+* **Stock Trade System:** User can simulate real-time trading with
 
-* ### Watchlist: Follow stocks without submitting an order.
+* **Watchlist:** Follow stocks without submitting an order.
 
-* ### Stock Searching: Search real stocks by stock symbol or company name.
+* **Stock Searching:** Search real stocks by stock symbol or company name.
 
-* ### Portfollio: Record user's real-time purchase power.
+* **Portfollio:** Record user's real-time purchase power.
 
-* ### Dashboard: View portfolio value over time, current cash allocation, and holdings diversity.
+* **Dashboard:** View portfolio value over time, current cash allocation, and holdings diversity.
 
 # Technologies
 
- * ### Backend:  Rails/ActiveRecord/PostgreSQL
+ * **Backend:**  Rails/ActiveRecord/PostgreSQL
  
- * ### Frontend:  React/Redux
+ * **Frontend:**  React/Redux
  
- * ### Recharts
+ * **Recharts**
   
- * ### HTTParty
+ * **HTTParty**
    
- * ### Alpha Vantage
+ * **Alpha Vantage**
  
  # Demos
  
