@@ -1,7 +1,6 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Cyber-Wallet
+[Live Demo](https://cyber-wallet.herokuapp.com/#/login)
+Cyber-Wallet is a trading platform for users to efficiently practice tradings with real-time stock data, but in
 
 Things you may want to cover:
 
