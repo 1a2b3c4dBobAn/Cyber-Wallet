@@ -20,7 +20,6 @@ class Search extends React.Component {
 
 
   clearSearch(){
-    console.log("running");
     this.setState({
       search_keyword: ''
     })

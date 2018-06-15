@@ -9,6 +9,7 @@ import fill from './fills_reducer';
 import search from './search_reducer';
 import watchlist from './watchlist_reducer';
 import dashboard from './dashboard_reducer';
+import tooltip from './custom_tool_tip_reducer';
 
 
 const rootReducer = combineReducers({
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   fill,
   watchlist,
   dashboard,
+  tooltip,
   // ui,
   errors,
 });

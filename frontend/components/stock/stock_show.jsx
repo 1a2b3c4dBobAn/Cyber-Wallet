@@ -3,6 +3,7 @@ import StockChartContainer from '../charts/stock_chart_container';
 import FillFormContainer from '../fill/fillform_container.jsx';
 import FillFormSellContainer from '../fill/fillform_sell_container.jsx';
 import WatchListContainer from '../watchlist/watchlist_container';
+import PriceDataContainer from './price_data/price_data_container';
 import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 import {
   Route,
@@ -55,6 +56,7 @@ class StockShow extends React.Component {
       <div className='stockPage' >
         <p className="company_sector">{this.props.stock.sector}</p>
         <p className="company_title">{this.props.stock.name}</p>
+        <PriceDataContainer/>
         <div className='stockPageCore'>
           <StockChartContainer className="stockGraph"/>
         <div className='sideBox'>
