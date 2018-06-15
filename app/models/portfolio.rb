@@ -15,9 +15,9 @@ class Portfolio < ApplicationRecord
   def update_portfolio(fill)
     if fill.side === 'buy'
       # render json: fill.errors.full_messages, status: 422 if self.purchase_power - fill.price * fill.size < 0
-      purchase_power = self.purchase_power - fill.price * fill.size
+      purchase_power = (self.purchase_power - fill.price * fill.size).round
     else
-      purchase_power = self.purchase_power + fill.price * fill.size
+      purchase_power = (self.purchase_power + fill.price * fill.size).round
     end
     self.update( {:purchase_power => purchase_power} )
   end
