@@ -20,6 +20,7 @@
 body {
   color: white;
   height: 100%;
+  font-size: 1.2vw;
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(206deg, #24ffc7 5%, #00ceb4 10%, #172050 60%, black 72%, #79047f);
   background-size: 280% 280%;
@@ -46,8 +47,8 @@ line {
 }
 
 .left{
-  margin-top: 270px;
-  width: 45%;
+  margin-top: 15vw;
+  width: 45vw;
   height: 100%;
   position: relative;
   box-sizing: border-box;
@@ -55,24 +56,24 @@ line {
 }
 
 .samplechart{
-  margin-left: 38%;
-  margin-right: 20px;
+  margin-left: 18vw;
+  margin-right: 1vw;
 }
 
 .right{
-  margin-left: 40px;
-  width: 50%;
+  margin-left: 2vw;
+  width: 45vw;
 }
 
 .title{
-  margin-top: 160px;
-  font-size: 20px;
+  margin-top: 11vw;
+  font-size: 1.6vw;
   font-family: 'Press Start 2P', cursive;
 }
 
 .BigTitle{
-  margin-top: 20px;
-  font-size: 40px;
+  margin-top: 1vw;
+  font-size: 2.7vw;
   font-family: 'Press Start 2P', cursive;
   text-shadow: 5px 5px #79047f;
 }
@@ -80,7 +81,7 @@ line {
 
 
 .login-form{
-  font-size: 12px;
+  font-size: 0.8vw;
   font-weight: lighter;
 }
 
@@ -90,13 +91,14 @@ line {
   color: white;
   border: 0.1px ;
   border-radius: 3px;
-  width: 280px;
-  height: 35px;
+  width: 18vw;
+  height: 2.4vw;
   box-sizing: border-box;
-  padding: 7px;
+  padding: 0.7vw;
   transition: box-shadow 0.25s;
   caret-color: rgba(0, 0, 0, 0.15);
 }
+
 
 
 .login-input:hover {
@@ -109,15 +111,18 @@ line {
 .session-submit {
   color: #4c0350;
   font-family: 'Press Start 2P', cursive;
-  margin-top: 50px;
+  font-size: 0.6vw;
+  margin-top: 2.6vw;
   border-radius: 3px;
-  padding: 12px 80px 15px 80px;
+  padding: 0.75vw 3.25vw 0.75vw 3.25vw;
   font-weight: bolder;
   background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 30%, rgba(76,3,80,0.8) 105%);
   box-shadow: 0px 7px 5px rgba(0, 14, 32 , 0.4);
   border: none;
   transition: box-shadow 0.1s;
 }
+
+
 
 .session-submit:hover {
     cursor: pointer;
@@ -128,10 +133,11 @@ line {
 .DemonLogin {
   color: #4c0350;
   font-family: 'Press Start 2P', cursive;
-  margin-top: 50px;
-  margin-left: 10px;
+  font-size: 0.6vw;
+  margin-top: 2.8vw;
+  margin-left: 0.4vw;
   border-radius: 3px;
-  padding: 12px 56px 15px 56px;
+  padding: 0.75vw 3vw 0.75vw 3vw;
   font-weight: bolder;
   background: linear-gradient(to bottom, #24ffc7 0%, rgb(42, 183, 110) 20%,rgba(76,3,80,0.8) 105%);
   box-shadow: 0px 7px 5px rgba(0, 14, 32 , 0.4);
@@ -155,15 +161,15 @@ a {
 
 
 .mian_page {
-  height: 1000px;
-  font-size: 12px;
+  height: 57vw;
+  font-size: 0.4vw;
   font-weight: lighter;
 }
 
 .mainHeader{
   display: flex;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 2.5vw;
+  margin-bottom: 1.5vw;
   z-index: 100;
 }
 
@@ -173,16 +179,16 @@ a {
 }
 
 .search-block {
-  width: 400px;
   flex-basis: 75%;
   position: relative;
 
 }
 
 .search-list {
+  font-size: 0.6vw;
   position: absolute;
-  left: 50px;
-  top: 50px;
+  left: 4vw;
+  top: 2.6vw;
   background: linear-gradient(206deg, #00ceb4 -10%, #172050 70%, #79047f 140%);
   border-radius: 3px;
   width: 94%;
@@ -199,7 +205,7 @@ a {
   padding-left: 80px;
   list-style-type: none;
   margin: auto;
-  height: 36px;
+  height: 1.8vw;
   position: relative;
 }
 
@@ -211,7 +217,7 @@ a {
 }
 
 .search-li p {
-  margin-top: 10px;
+  margin-top: 0.5vw;
   display: inline-block;
    vertical-align: top;
 }
@@ -230,9 +236,10 @@ a {
 
 #searchbar.login-input {
   width: 94%;
-  height: 32px;
-  margin-left: 50px;
-  margin-right: 25px;
+  height: 2vw;
+  margin-left: 4vw;
+  margin-right: 10vw;
+  font-size: 0.7vw;
 }
 
 #searchbar.login-input:hover{
@@ -252,15 +259,16 @@ a {
   flex-basis: 25%;
   display: flex;
   font-size: 12px;
+  margin-left: 1vw;
 }
 
 .header-button{
-  height: 30px;
+  height: 1.7vw;
   color: white;
-  font-size: 10px;
-  margin:  3.6px 40px auto 10px;
+  font-size: 0.7vw;
+  margin:  3.6px 2vw auto 0.5vw;
   border-radius: 3px;
-  padding: 1px 30px 2px 30px;
+  padding: 1px 2vw 2px 2vw;
   font-weight: bolder;
   background:rgba(76,3,80,0.1);
   box-shadow: 0px 3px 1px rgba(0, 14, 32 , 0.6);
@@ -273,18 +281,44 @@ a {
   text-shadow: 0px 0px 4px #24ffc7;
 }
 
+
+.header-name{
+  font-size: 0.7vw;
+}
+
 .stockPage {
-  margin-left: 80px;
+  margin-left: 4vw;
 }
 
 .stockPageCore {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 0.6vw;
 }
 
 .stockGraph {
   flex: 75%;
 }
+
+.company_sector{
+  font-size: 0.65vw;
+}
+
+/* .company_sector{
+  padding-top: 10px;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  height: 30px;
+  width:  150px;
+  transition: box-shadow 0.3s;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.company_sector:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #24ffc7;
+} */
 
 .sideBox{
   flex: 25%;
@@ -292,15 +326,16 @@ a {
 }
 
 .fillsBox{
-  width: 270px;
-  height:360px;
+  width: 14vw;
+  height: 19vw;
   margin: 0px;
-  margin-bottom: 15px;
+  margin-bottom: 1.4vw;
   box-shadow: 0px 4px 15px rgba(76,3,80,0.4);
   transition: box-shadow 1.2s;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 1vw;
   padding-top: 0px;
+  font-size: 0.65vw;
 }
 
 .fillsBox:hover{
@@ -319,7 +354,7 @@ a {
   border: none;
   background-color: rgba(0,0,0,0);
   color: white;
-  font-size: 10px;
+  font-size: 0.45vw;
   font-family: 'Press Start 2P', cursive;
   padding-top: 18px;
   padding-bottom: 12px;
@@ -328,14 +363,18 @@ a {
 
 #on{
   border-top: 4px solid #24ffc7;
+  border-left: 0px;
+  border-right: 0px;
+  width: 50%;
+  text-align: center;
 }
 
 #off{
   border-top: 4px solid rgba(76,3,80,0);
   box-shadow: 0px 4px 15px rgba(76,3,80,0);
   transition: box-shadow 0.2s;
-  padding-left: 7px;
-  padding-right: 7px;
+  text-align: center;
+  width: 50%;
 }
 
 #off:hover{
@@ -347,7 +386,7 @@ a {
 
 .share-input {
   display: flex;
-  margin: 20px 0px 20px auto;
+  margin: 0.5vw 0px 0.4vw auto;
   justify-content: space-between;
 }
 
@@ -358,8 +397,8 @@ a {
   color: white;
   border: 0.1px ;
   border-radius: 3px;
-  width: 150px;
-  height: 35px;
+  width: 7vw;
+  height: 2vw;
   box-sizing: border-box;
   padding: 7px;
   transition: box-shadow 0.25s;
@@ -377,7 +416,7 @@ a {
 .market-price {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 
@@ -388,7 +427,7 @@ a {
 }
 
 .asset-display{
-  margin-top: 40px;
+  margin-top: 1.8vw;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -400,38 +439,38 @@ a {
 
 #order-submit.session-submit {
   margin: 0;
-  margin-top: 20px;
-  width: 230px;
+  margin-top: 1.3vw;
+  width: 100%;
   align-items: center;
   padding-left: 0px;
   padding-right: 0px;
 }
 
 .company_title{
-  font-size: 30px;
+  font-size: 1.8vw;
   font-family: 'Press Start 2P', cursive;
-  text-shadow: 5px 5px #79047f;
-  margin-bottom: 15px;
+  text-shadow: 0.3vw 0.3vw #79047f;
+  margin-bottom: 0.3vw;
 }
 
 .pointed_price{
-  font-size: 25px;
+  font-size: 1.5vw;
   font-family: 'Press Start 2P', cursive;
-  margin: 10px 0px 10px 0px;
+  margin: 0.4vw 0px 10px  0.4vw;
 }
 
 .price_change {
-  font-size: 16px;
+  font-size: 0.9vw;
   margin: 10px 0px 40px 0px;
 }
 
 .stockDataButton {
   height: 30px;
   color: white;
-  font-size: 10px;
+  font-size: 0.65vw;
   margin:  3.6px 5px auto 3px;
   border-radius: 3px;
-  padding: 1px 30px 2px 30px;
+  padding: 0.02vw 1.8vw 0.02vw 1.8vw;
   font-weight: bolder;
   background:rgba(58, 255, 204, 0.06);
   box-shadow: 0px 3px 8px rgba(76,3,80,0.9);
@@ -446,18 +485,20 @@ a {
 }
 
 .buttonGroup{
-  margin-left: 70px;
+  margin-left: 4vw;
 }
 
 
 .addOrRemove{
+  font-size: 0.7vw;
   border: none;
   background-color: rgba(0,0,0,0);
   color: white;
-  height: 40px;
-  width:  150px;
+  height: 1.6vw;
+  min-width: 8vw;
+  box-sizing: content-box;
   transition: box-shadow 0.3s;
-  margin-left:  60px;
+  margin-left:  3.15vw;
 }
 
 .addOrRemove:hover{
@@ -471,28 +512,33 @@ a {
 .portfolio{
   width: 85%;
   margin: auto;
+  margin-top: 2vw;
   display: flex;
   /* border: 1px solid white; */
 }
 
 .portfolio-sector{
     width: 65%;
+
 }
 
 .portfolio-chart{
-
-  height: 500px;
+  margin-top: 1vw;
+  box-sizing: content-box;
+  /* border: 2px solid red; */
 }
 
 .asset-charts {
   margin: auto;
+  margin-top: 1.6vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .dashboard-watchlist{
   margin-left: 30px;
   width: 29%;
+  height: 47vw;
   box-shadow: 0px 4px 15px rgba(76,3,80,0.4);
   box-sizing: border-box;
   transition: box-shadow 1.2s;
@@ -504,33 +550,73 @@ a {
   box-shadow: 0px 0px 17px #24ffc7;
 }
 
+.watchlist-ul{
+  width: 100%;
+  padding:  0;
+}
+
 .watchlist-link{
+  width: 100%;
   text-decoration: none;
   list-style-type: none;
   display: flex;
 }
 
 .watchlist-li{
-  margin-top: 10px;
+  font-size: 0.65vw;
+  margin-top: 0.6vw;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   vertical-align: top;
   justify-content: space-between;
-  transition: box-shadow 0.3s;
-  position: relative;
+  transition: box-shadow 0.4s;
 }
 
 .watchlist-li:hover{
+  background: linear-gradient(206deg, #00ceb4 -10%, #79047f 130%);
   box-shadow: 0px 0px 17px #24ffc7;
 }
 
 .watchlist-li-name{
-  margin-left: 80px;
+  margin-left: 2vw;
 }
 
 .watchlist-li-price{
-  margin-left: 80px;
+  margin-left: 2vw;
 }
 
+.piechart-title{
+  font-size: 1vw;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.dashboard-title{
+  height: 17%;
+  margin-top: 0;
+  font-size: 1vw;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0.5vw 0.3vw #79047f;
+}
+
+.dashboard-title h1{
+  margin-top: 0;
+}
+
+.total-value{
+  font-size: 1.4vw;
+  text-shadow: none;
+  margin-bottom: 0.4vw;
+}
+
+.total-value-sign{
+  margin-top: 0px;
+  margin-bottom: 3.5vw;
+  font-size: 0.8vw;
+  text-shadow: none;
+}
 
 /* the spinner for loading */
 

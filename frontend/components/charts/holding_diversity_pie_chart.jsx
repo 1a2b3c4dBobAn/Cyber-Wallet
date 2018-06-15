@@ -86,7 +86,7 @@ const renderActiveShape = (props) => {
 
       <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none"/>
       <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none"/>
-      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fontSize="20" fill="white">{`$ ${value}`}</text>
+      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fontSize="1.3vw" fill="white">{`$ ${value}`}</text>
       <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#999">
         {`(Rate ${(percent * 100).toFixed(2)}%)`}
       </text>
@@ -100,10 +100,12 @@ class TwoLevelPieChart extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      activeIndex: 0
+      activeIndex: 0,
+      width: 0, height: 0
     }
 
     this.onPieEnter = this.onPieEnter.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   onPieEnter(data, index) {
@@ -112,25 +114,42 @@ class TwoLevelPieChart extends React.Component{
     });
   }
 
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
 
 	render () {
+    const width = this.state.width * 0.23
+    const height = this.state.width * 0.2
+
   	return (
-    	<PieChart width={480} height={300}>
+      <div>
+      <h2 className="piechart-title">Holding Diversity</h2>
+    	<PieChart width={width * 1.3} height={height}>
 
         <linearGradient id="arc-gradient2">
           <stop offset="0%" stopOpacity="0" />
           <stop offset="50%" stopColor="white" />
           <stop offset="100%" stopColor="#8884d8" />
         </linearGradient>
-
         <Pie
         	activeIndex={this.state.activeIndex}
           activeShape={renderActiveShape}
           data={this.props.holdings}
-          cx={240}
-          cy={150}
-          innerRadius={90}
-          outerRadius={110}
+          cx={width * 1.3 / 2}
+          cy={height /2 }
+          innerRadius={width*0.19}
+          outerRadius={width*0.25}
           fill="#8884d8"
           stroke="rgba(0,0,0,0)"
           offset={-4}
@@ -138,6 +157,7 @@ class TwoLevelPieChart extends React.Component{
           onMouseEnter={this.onPieEnter}
         />
        </PieChart>
+     </div>
     );
   }
 }

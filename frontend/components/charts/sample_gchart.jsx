@@ -11,31 +11,52 @@ const data = [
 ];
 
 class StackedAreaChart extends React.Component {
+  constructor(props) {
+  super(props);
+  this.state = { width: 0, height: 0 };
+  this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+}
+
+
+componentDidMount() {
+  this.updateWindowDimensions();
+  window.addEventListener('resize', this.updateWindowDimensions);
+}
+
+componentWillUnmount() {
+  window.removeEventListener('resize', this.updateWindowDimensions);
+}
+
+updateWindowDimensions() {
+  this.setState({ width: window.innerWidth, height: window.innerHeight });
+}
+
+
 	render () {
+    const width = this.state.width * 0.24
+    const height = this.state.width * 0.146
   	return (
-    	<AreaChart width={490} height={280} data={data}
+    	<AreaChart width={width} height={height} data={data}
 
-  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+      margin={{ top: 10, right: width * 0.1, left: 0, bottom: 0 }}>
 
-  <defs>
-    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="5%" stopColor="#79047f" stopOpacity={0.6}/>
-      <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-    </linearGradient>
-    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="3%" stopColor="#24ffc7" stopOpacity={0.8}/>
-      <stop offset="96%" stopColor="#82ca9d" stopOpacity={0}/>
-    </linearGradient>
-  </defs>
-
-
-
-  <XAxis dataKey="name" />
-  <YAxis />
+      <defs>
+        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#79047f" stopOpacity={0.6}/>
+          <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+        </linearGradient>
+        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="3%" stopColor="#24ffc7" stopOpacity={0.8}/>
+          <stop offset="96%" stopColor="#82ca9d" stopOpacity={0}/>
+        </linearGradient>
+      </defs>
 
   <CartesianGrid strokeDasharray="3 3" />
-
-  <Tooltip />
+  <Tooltip
+    wrapperStyle={{ backgroundColor: 'none', border: 'none'}}
+    labelStyle={{color: "rgba(0,0,0,0)"}}
+    cursor={{ stroke: 'rgba(255,255,255,0.4)', strokeWidth: 1 }}
+    />
 
   <Area type="monotone" dataKey="Ugh" stroke="#79047f" fillOpacity={1} fill="url(#colorUv)" />
   <Area type="monotone" dataKey="Aye" stroke="#24ffc7" fillOpacity={1} fill="url(#colorPv)" />

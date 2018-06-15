@@ -14,19 +14,3 @@ const mapsDispatchToProps = dispatch => ({
 
 
 export default connect( mapStateToProps,mapsDispatchToProps )( Search )
-
-
-
-// class SearchContainer extends React.Component {
-//   render() {
-//     return (
-//       <input type="text"
-//         value="Search"
-//         id="searchbar"
-//         className="login-input"
-//       />
-//     )
-//   }
-// }
-//
-// export default SearchContainer;

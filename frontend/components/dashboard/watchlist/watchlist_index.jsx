@@ -13,8 +13,8 @@ class WatchlistIndex extends React.Component {
       return ''
     }else {
       return(
-        <ul>
-          <p>Watchlist</p>
+        <ul className="watchlist-ul">
+          <p className="piechart-title">Watchlist</p>
           {watchlistinfo.map( stock =>
             <Link to={"/stocks/"+ stock.symbol}  className="watchlist-link">
               <li className="watchlist-li" >

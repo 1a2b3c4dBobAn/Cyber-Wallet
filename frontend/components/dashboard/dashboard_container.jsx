@@ -9,7 +9,8 @@ import { fetchHoldingInfo, fetchPortfolioValue, getWatchedStockList } from '../.
 const mapStateToProps = state => ({
   watchlist: state.watchlist,
   purchase_power: state.fill.purchase_power,
-  dashboard: state.dashboard
+  dashboard: state.dashboard,
+  currentUser: state.entities.users[state.session.id]
 })
 
 

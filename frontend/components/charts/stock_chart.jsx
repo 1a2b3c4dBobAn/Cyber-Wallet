@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import merge from 'lodash/merge';
-import PointedPriceContainer from './pointed_price_container'
 
 import {AreaChart,LineChart, Line, XAxis, YAxis,linearGradient, CartesianGrid, Tooltip, Legend, fill} from 'recharts';
 
@@ -13,7 +12,7 @@ export class CustomTooltip extends React.Component {
 		label: PropTypes.string,
 	};
 
-	componentWillUpdate(){
+	componentDidUpdate(){
 		const { active } = this.props;
 		if (active) {
 			const { payload, label } = this.props;
@@ -44,15 +43,30 @@ class StockChart extends React.Component {
     super(props);
 		const prices = this.props.stock.prices;
 		this.state = {
-				pointedprice: null
+				pointedprice: null,
+				width: 0, height: 0
 		}
 		this.getPointedPrice = this.getPointedPrice.bind(this);
 		this.returnToEndPrice = this.returnToEndPrice.bind(this);
 		this.changeFormatter = this.changeFormatter.bind(this);
+		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
+	componentDidMount() {
+		this.updateWindowDimensions();
+		window.addEventListener('resize', this.updateWindowDimensions);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateWindowDimensions);
+	}
+
+	updateWindowDimensions() {
+		this.setState({ width: window.innerWidth, height: window.innerHeight });
+	}
+
 	getPointedPrice(dataFromChild){
-		var pointedprice = merge({}, { pointedprice: dataFromChild });
+		const pointedprice = { pointedprice: dataFromChild };
 		this.setState(pointedprice);
 	}
 
@@ -76,7 +90,7 @@ class StockChart extends React.Component {
 
 	getStyles(){}
 
-
+	shouldComp
 
 	render () {
       const prices = this.props.stock.prices;
@@ -88,12 +102,14 @@ class StockChart extends React.Component {
       if (endPrice < startPrice) {
         profitIndicator = 'rgb(181,33,127)';
       }
+			const width = this.state.width * 0.7;
+			const height = this.state.width * 0.3;
 
   	return (
       <div>
       <p className="pointed_price"  >{ '$' + (this.state.pointedprice  || endPrice ) }</p>
       <p className="price_change">{ this.changeFormatter(startPrice) }</p>
-    	<LineChart width={1200} height={560} data={data}
+    	<LineChart width={width} height={height} data={data}
             margin={{top: 0, right: 10, left: 20}}  onMouseLeave={this.returnToEndPrice}   >
 
        <defs>
@@ -104,7 +120,11 @@ class StockChart extends React.Component {
 
        <XAxis dataKey="time" />
        <YAxis type="number" domain={[dataMin => (Math.round(dataMin) - 0.55),  'dataMax']}  />
-	     <Tooltip  wrapperStyle={{ backgroundColor: 'none', border: 'none'}}  content={<CustomTooltip  returnPointedPrice={this.getPointedPrice} />}  labelStyle={{color: "white", fontSize: "20px" }} cursor={{ stroke: 'rgba(255,255,255,0.4)', strokeWidth: 1 }} position={{y: 0}}  />
+	     <Tooltip  wrapperStyle={{ backgroundColor: 'none', border: 'none'}}
+				 content={<CustomTooltip returnPointedPrice={this.getPointedPrice} />}
+				 labelStyle={{color: "white", fontSize: "20px" }}
+				 cursor={{ stroke: 'rgba(255,255,255,0.4)', strokeWidth: 1 }}
+				 position={{y: 0}}  />
        <Line type="monotone" dataKey="price" stroke={profitIndicator} strokeWidth = '8' filter="url(#f1)" dot={false}/>
        <Line type="monotone" dataKey="price" stroke="white" strokeWidth = '3'  dot={false}/>
       </LineChart>

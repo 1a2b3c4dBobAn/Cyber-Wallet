@@ -16,5 +16,6 @@ class Fill < ApplicationRecord
 
   belongs_to :user
   belongs_to :stock
+  validates :size, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
 end

@@ -56,7 +56,7 @@ class StockShow extends React.Component {
         <p className="company_sector">{this.props.stock.sector}</p>
         <p className="company_title">{this.props.stock.name}</p>
         <div className='stockPageCore'>
-          < StockChartContainer className="stockGraph"/>
+          <StockChartContainer className="stockGraph"/>
         <div className='sideBox'>
             <div className='fillsBox'>
                 <Switch>

@@ -1,14 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import styled from 'styled-components';
 import SimpleLineChart from '../charts/sample_chart';
 import StackedAreaChart from '../charts/sample_gchart';
-
-const Sp1 = styled.p`
-  font-size: 10px;
-  color: white;
-  text-decoration: none;
-`;
 
 class SignUpForm extends React.Component {
   constructor(props) {
@@ -86,7 +79,7 @@ class SignUpForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
               />
-           <Sp1>Please {this.props.formType} or {this.props.navLink}</Sp1>
+            <p>Please {this.props.formType} or {this.props.navLink}</p>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>

@@ -5,14 +5,6 @@ import SimpleLineChart from '../charts/sample_chart';
 import StackedAreaChart from '../charts/sample_gchart';
 
 
-
-const Sp1 = styled.p`
-  font-size: 10px;
-  color: white;
-  text-decoration: none;
-`;
-
-
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +35,7 @@ class SessionForm extends React.Component {
 
   handleDemologin(e) {
     e.preventDefault();
-    this.setState({ ['username']: 'PaperBoi', ['password']: '123456' }, ()=> {
+    this.setState({ ['username']: 'SnoopDog', ['password']: 'SnoopDog' }, ()=> {
       const user = Object.assign({}, this.state);
       this.props.processForm(user).then(() => this.props.history.push('/'));
     });
@@ -91,7 +83,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
               />
-            <Sp1>Please {this.props.formType} or {this.props.navLink}</Sp1>
+            <p>Please {this.props.formType} or {this.props.navLink}</p>
             <input className="session-submit" type="submit" value={this.props.formType} />
             <input onClick={this.handleDemologin} className= "DemonLogin" type="submit" value="Demo" />
           </div>
