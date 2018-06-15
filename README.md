@@ -25,13 +25,14 @@ Things you may want to cover:
 
  * **Backend:**  Rails/ActiveRecord/PostgreSQL
  
- * **Frontend:**  React/Redux
+ * **Frontend:**  React/Redux/javascript
  
  * **Recharts**
   
  * **HTTParty**
    
  * **Alpha Vantage**
+ 
  
 ## Demos
  
