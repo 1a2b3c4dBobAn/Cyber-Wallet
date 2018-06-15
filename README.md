@@ -7,5 +7,5 @@ Things you may want to cover:
 
 # Features
 
-* User authentication:
+* ### User authentication:
 end-to-end using BCrypt.
