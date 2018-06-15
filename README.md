@@ -7,7 +7,7 @@ Things you may want to cover:
 
 # Features
 
-* ### User authentication: end-to-end using BCrypt.
+* ### **User authentication:** end-to-end using BCrypt.
 
 * ### Real-time Stock Data: user can get all real-time data of the stocks that on Nasdap. 
 
@@ -32,5 +32,30 @@ Things you may want to cover:
  * ### HTTParty
    
  * ### Alpha Vantage
+ 
+ # Demos
+ 
+ ## Login
+ 
+ 
+ 
+ ## Dashboard
+ 
+ 
+ ## Real-time Stock Show Page
+ 
+ 
+ 
+ ## Search
+ 
+ 
+ 
+ # Code Samples
+ 
+ 
+ 
+ # Design Highlights
+ 
+ 
  
  
